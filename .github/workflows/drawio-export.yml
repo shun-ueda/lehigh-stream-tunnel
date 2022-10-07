@@ -18,25 +18,18 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Export drawio files to asciidoctor and png files
         uses: rlespinasse/drawio-export-action@v2
         with:
-          format: adoc
+          path: .
+          format: pdf
           transparent: true
-          output: drawio-assets
-
-      - name: Get current time
-        uses: 1466587594/get-current-time@v2
-        id: current-time
-        with:
-          format: YYYYMMDD-HH
-          utcOffset: "-04:00"
+          output: .
       - name: Commit and push if changed
         run: |-
           git diff
           git config --global user.email "me@shu.nu"
           git config --global user.name "shun-ueda"
           git add -A
-          git commit -m "${{ steps.current-time.outputs.readableTime }}" || exit 0
+          git commit -m "[Actions] Sync diagram" || exit 0
           git push
