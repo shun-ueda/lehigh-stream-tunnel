@@ -45,7 +45,7 @@ jobs:
         uses: rlespinasse/drawio-export-action@v2
         with:
           format: svg
-      - run: yarn rename
+#      - run: yarn rename
       - name: Commit and push if changed
         run: |-
           git diff
