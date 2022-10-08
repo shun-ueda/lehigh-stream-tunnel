@@ -34,7 +34,7 @@ jobs:
       - name: Export drawio files to .png
         uses: rlespinasse/drawio-export-action@v2
         with:
-          format:
+          format: png
           transparent: true
       - name: Export drawio files to .svg
         uses: rlespinasse/drawio-export-action@v2
