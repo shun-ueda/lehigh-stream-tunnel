@@ -6,6 +6,7 @@
   "author": "Shun Ueda <62182668+shun-ueda@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "reset": "rm -rf export",
     "rename": "node .github/scripts/index.js"
   }
 }
