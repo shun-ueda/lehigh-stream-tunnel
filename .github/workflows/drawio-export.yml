@@ -42,8 +42,6 @@ jobs:
         with:
           format: svg
           remove-page-suffix: true
-      - shell: bash
-        run: curl -w "\n" -s -X PURGE https://camo.githubusercontent.com/shun-ueda/lehigh-steam-tunnel/main/export/diagram.svg
       - name: Commit and push if changed
         run: |-
           git diff
@@ -52,3 +50,5 @@ jobs:
           git add -A
           git commit -m "[Actions] Sync diagram" || exit 0
           git push
+      - shell: bash
+        run: curl -w "\n" -s -X PURGE https://camo.githubusercontent.com/shun-ueda/lehigh-steam-tunnel/main/export/diagram.svg
