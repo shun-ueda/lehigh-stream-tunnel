@@ -18,10 +18,33 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Export drawio files to asciidoctor and png files
+      - name: Export drawio files to .pdf
         uses: rlespinasse/drawio-export-action@v2
         with:
           format: pdf
+      - name: Export drawio files to. md
+        uses: rlespinasse/drawio-export-action@v2
+        with:
+          format: md
+      - name: Export drawio files to .jpg
+        uses: rlespinasse/drawio-export-action@v2
+        with:
+          format: jpg
+          quality: 100
+      - name: Export drawio files to .png
+        uses: rlespinasse/drawio-export-action@v2
+        with:
+          format:
+          transparent: true
+      - name: Export drawio files to .svg
+        uses: rlespinasse/drawio-export-action@v2
+        with:
+          format: svg
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: yarn rename
       - name: Commit and push if changed
         run: |-
           git diff
