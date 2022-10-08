@@ -7,5 +7,5 @@
     | <a href="https://github.com/shun-ueda/lehigh-steam-tunnel/raw/main/export/diagram.svg">.svg</a>
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shun-ueda/lehigh-steam-tunnel/main/export/diagram.jpg" />
+  <img src="https://raw.githubusercontent.com/shun-ueda/lehigh-steam-tunnel/main/export/diagram.svg" />
 </p>
