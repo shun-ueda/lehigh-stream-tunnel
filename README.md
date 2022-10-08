@@ -1,4 +1,4 @@
-<h1 align="center">Map of Lehigh's Steam Tunnels</h1>
+<h1 align="center">Lehigh's Steam Tunnel System</h1>
 <p align="center">
   Download Links:
     <a href="https://github.com/shun-ueda/lehigh-steam-tunnel/raw/main/export/diagram.pdf">.pdf</a> 
