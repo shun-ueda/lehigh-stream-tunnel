@@ -25,11 +25,6 @@ jobs:
         with:
           format: pdf
           remove-page-suffix: true
-      - name: Export drawio files to. md
-        uses: rlespinasse/drawio-export-action@v2
-        with:
-          format: md
-          remove-page-suffix: true
       - name: Export drawio files to .jpg
         uses: rlespinasse/drawio-export-action@v2
         with:
