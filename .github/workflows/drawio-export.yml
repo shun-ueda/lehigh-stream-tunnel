@@ -13,39 +13,40 @@ jobs:
   drawio-export:
     runs-on: ubuntu-latest
     steps:
+      - shell: bash
+        run: rm -rf export
       - name: Checkout sources
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: yarn reset
       - name: Export drawio files to .pdf
         uses: rlespinasse/drawio-export-action@v2
         with:
           format: pdf
+          remove-page-suffix: true
       - name: Export drawio files to. md
         uses: rlespinasse/drawio-export-action@v2
         with:
           format: md
+          remove-page-suffix: true
       - name: Export drawio files to .jpg
         uses: rlespinasse/drawio-export-action@v2
         with:
           format: jpg
+          remove-page-suffix: true
           quality: 100
       - name: Export drawio files to .png
         uses: rlespinasse/drawio-export-action@v2
         with:
           format: png
+          remove-page-suffix: true
           transparent: true
       - name: Export drawio files to .svg
         uses: rlespinasse/drawio-export-action@v2
         with:
           format: svg
-#      - run: yarn rename
+          remove-page-suffix: true
       - name: Commit and push if changed
         run: |-
           git diff
