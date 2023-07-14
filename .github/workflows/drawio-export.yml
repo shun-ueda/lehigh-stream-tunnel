@@ -46,9 +46,9 @@ jobs:
         run: |-
           git diff
           git config --global user.email "me@shu.nu"
-          git config --global user.name "shun-ueda"
+          git config --global user.name "shunueda"
           git add -A
           git commit -m "[Actions] Sync diagram" || exit 0
           git push
       - shell: bash
-        run: curl -w "\n" -s -X PURGE https://camo.githubusercontent.com/shun-ueda/lehigh-steam-tunnel/main/export/diagram.svg
+        run: curl -w "\n" -s -X PURGE https://camo.githubusercontent.com/shunueda/lehigh-steam-tunnel/main/export/diagram.svg
